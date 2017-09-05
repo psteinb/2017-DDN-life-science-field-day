@@ -7,8 +7,47 @@ date: Sep 12, 2017
 ---
 
 
-# MPI CBG ?
+# Max Planck Institute of Molecular Cell Biology and Genetics (MPI CBG)
 
-## the institute
+## The Institute
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+![](img/800px-MPI-CBG_building_outside_4pl.jpg)  
+*Scientific Software Engineer* at Max Planck Institute of Molecular Cell Biology and Genetics
+</center>
+
+[/column]
+
+[column,class="col-xs-4"]
+
+* Dresden, Germany
+* 500 staff
+* founded 2001
+* cell biology
+* genomics
+* systems biology
+
+[/column]
+
+[/columns]
+
+## Outline
+
+<div style="font-size : 1.5em">
+
+<center>
+1. SPIM@CBG : overview and history
+
+2. Automation
+
+3. Present and Future
+</center>
+
+</div>
 
 
+# CBG and SPIM
