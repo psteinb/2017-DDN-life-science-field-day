@@ -42,7 +42,7 @@ date: Sep 12, 2017
 <center>
 1. SPIM@CBG : overview and history
 
-2. Automation & Reduction
+2. Automation, Reduction and more
 
 3. Present and Future
 </center>
@@ -50,9 +50,9 @@ date: Sep 12, 2017
 </div>
 
 
-# CBG and SPIM
+# SPIM@CBG
 
-## 2012
+## 2012/2013
 
 <center>
 ![](img/spim_dataflow_2014.png){ width=80% }  
@@ -66,45 +66,19 @@ used by Huisken Lab
 used by *Huisken Lab*, *Myers Lab*, Tomancak Lab, LMF
 </center>
 
-## Commercial vs. Custom SPIM?
+## Data Rates
 
 <div style="font-size : 1.25em">
 
-|         | Commercial SPIM | Experimental SPIM |
-|---------|-----------------|-------------------|
-| MB/s    |             300 |              1600 |
-| TB/day  |              26 |               138 |
-| TB/week |             182 |               966 |
-|         |                 |                   |
-| 2014/TB |             200 |               200 |
-| 2016/TB |            2100 |              2100 |
-
+|                | Commercial SPIM | Custom SPIM |                        LHC Run 1 |
+|---------------:|----------------:|------------:|---------------------------------:|
+| MB/s           |             300 |        1600 |                             1000 |
+| TB/day         |              26 |         138 |                               86 |
+| TB/week        |             182 |         966 |                              602 |
+| **Storage/TB** |        **2500** |    **2500** |                     **303 154**  |
+|                |             CBG |         CBG | [WLCG](http://wlcg.web.cern.ch/) |
 </div>
 
-<!-- . . .    -->
-
-<!-- <br\> -->
-<!-- <br\> -->
-
-<!-- [columns,class="row"] -->
-
-
-<!-- [column,class="col-xs-6"] -->
-
-<!-- - in 2014: HPC storage was 200 TB only -->
-
-<!-- [/column] -->
-
-<!-- [column,class="col-xs-6"] -->
-
-<!-- - LHC run 1 averaged 1 GB/s   -->
-<!-- (all experiments) -->
-<!-- - LHC run 2is expected to yield 6 GB/s  -->
-
-<!-- [/column] -->
-
-
-<!-- [/columns] -->
 
 
 ## Central Storage 
@@ -136,3 +110,194 @@ used by *Huisken Lab*, *Myers Lab*, Tomancak Lab, LMF
 [/column]
 
 [/columns]
+
+
+# Automation, Reduction and more
+
+## Top level view
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-6"]
+
+<center>
+![](fig/spim-workflow.svg){ width=40% }  
+</center>
+
+[/column]
+
+[column,class="col-xs-6"]
+
+- aquisition on the microscope  
+&nbsp;
+- quality control  
+(can happen on the scope)  
+&nbsp;
+- processing on HPC infrastructure  
+(fusion, deconvolution)  
+&nbsp;
+- storage for downstream analysis (publication)
+
+[/column]
+
+
+[/columns]
+
+
+## Automate Transfer?
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-8"]
+
+<center>
+![](img/humanshu_bhatia_TUDresden_thesis_p60_fig6.8.png){ width=85% }  
+</center>
+
+[/column]
+
+[column,class="col-xs-4"]
+
+- idea: monitor directory on aquisition host and apply rule based data transfers
+
+- master thesis at TU Dresden in 2014/2015 comparing 
+
+- results from ramdisk to ramdisk promising only (for [iRODS](https://irods.org/))
+
+- downstream transparency of [iRODS](https://irods.org/) unclear 
+
+- [UNICORE](https://www.unicore.eu/) not yet there
+
+[/column]
+
+
+[/columns]
+
+
+## Automated Parallel Pipeline
+
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-6"]
+
+<center>
+![](img/cschmied_pipeline.png){ width=70% }  
+</center>
+
+[/column]
+
+[column,class="col-xs-6"]
+
+- publication by [Schmied et al., 2016](https://academic.oup.com/bioinformatics/article/32/7/1112/1744153/An-automated-workflow-for-parallel-processing-of)
+
+- express individual steps as direct acyclic graph in [snakemake](https://snakemake.readthedocs.io/en/stable/)
+
+- running [Fiji](fiji.sc) in headless mode challenging
+
+- parameter interface through [Fiji](fiji.sc) macros very time consuming
+
+- portable and scalable parallel execution
+
+- replaced a large pile of shell scripts
+
+[/column]
+
+
+[/columns]
+
+
+## Training 
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-6"]
+
+<center>
+IMAGE OF OUR COURSES
+</center>
+
+[/column]
+
+[column,class="col-xs-6"]
+
+- knowledge is key when data becomes large
+
+- rolled out [software carpentry](www.software-carpentry.org) style course curriculum  
+( topics: bash, git, python, R, HPC )
+
+- extremely positive feedback and high demand
+
+[/column]
+
+
+[/columns]
+
+&nbsp;
+
+<center>
+**Trained scientists are happy scientists!**
+</center>
+
+
+# Present and Future
+
+## Automated Transfers! { data-background-image="img/DARPA_Big_Data.jpg" }
+
+
+<div style="font-size : 1.25em">
+<center>
+
+- API and format are still open
+
+- obtain meta data during ingest (user interaction)
+
+- interface acquisition to distributed pipelines
+
+- challenge: stay flexible
+
+</center>
+</div>
+
+## The Future
+
+[columns,class="row vertical-align"]
+
+[column,class="col-xs-6"]
+
+<center>
+![](fig/spim-workflow-future.svg){ width=40% }  
+</center>
+
+[/column]
+
+[column,class="col-xs-6"]
+
+- Aquisition of deconvolved & compressed stacks at the source  
+&nbsp;
+- Post-Processing to enhance resolution  
+&nbsp;
+- Realtime Visualisation (holo deck)  
+&nbsp;
+- Downstream analysis or storage or cloud based sharing or ..
+
+[/column]
+
+
+[/columns]
+
+# Summary
+
+## SPIM is here to stay
+
+- SPIM microscopes are capable of produce unprecedented amounts of data (wrt potential and size)
+
+- MPI CBG SPIM community is actively solving inherent problems (deconvolution, lack of resolution, compression, data management, ...)
+
+- Good infrastructure (software/hardware) is key to high scientific discovery rate
+
+&nbsp;
+<center>
+**Thank you for your attention!**
+</center>
+

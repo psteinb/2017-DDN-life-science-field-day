@@ -73,14 +73,14 @@
 <center>
 <ol type="1">
 <li><p>SPIM@CBG : overview and history</p></li>
-<li><p>Automation &amp; Reduction</p></li>
+<li><p>Automation, Reduction and more</p></li>
 <li>Present and Future</li>
 </ol>
 </center>
 </div>
 </section></section>
-<section><section id="cbg-and-spim" class="titleslide slide level1"><h1>CBG and SPIM</h1></section><section id="section" class="slide level2">
-<h1>2012</h1>
+<section><section id="spimcbg" class="titleslide slide level1"><h1>SPIM@CBG</h1></section><section id="section" class="slide level2">
+<h1>2012/2013</h1>
 <center>
 <img src="img/spim_dataflow_2014.png" style="width:80.0%" /><br />
 used by Huisken Lab
@@ -91,64 +91,52 @@ used by Huisken Lab
 <img src="img/spim_dataflow_2016_wide.png" style="width:75.0%" /><br />
 used by <em>Huisken Lab</em>, <em>Myers Lab</em>, Tomancak Lab, LMF
 </center>
-</section><section id="commercial-vs.-custom-spim" class="slide level2">
-<h1>Commercial vs. Custom SPIM?</h1>
+</section><section id="data-rates" class="slide level2">
+<h1>Data Rates</h1>
 <div style="font-size : 1.25em">
 <table>
 <thead>
 <tr class="header">
-<th></th>
-<th>Commercial SPIM</th>
-<th>Experimental SPIM</th>
+<th style="text-align: right;"></th>
+<th style="text-align: right;">Commercial SPIM</th>
+<th style="text-align: right;">Custom SPIM</th>
+<th style="text-align: right;">LHC Run 1</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>MB/s</td>
-<td>300</td>
-<td>1600</td>
+<td style="text-align: right;">MB/s</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">1600</td>
+<td style="text-align: right;">1000</td>
 </tr>
 <tr class="even">
-<td>TB/day</td>
-<td>26</td>
-<td>138</td>
+<td style="text-align: right;">TB/day</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">138</td>
+<td style="text-align: right;">86</td>
 </tr>
 <tr class="odd">
-<td>TB/week</td>
-<td>182</td>
-<td>966</td>
+<td style="text-align: right;">TB/week</td>
+<td style="text-align: right;">182</td>
+<td style="text-align: right;">966</td>
+<td style="text-align: right;">602</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
+<td style="text-align: right;"><strong>Storage/TB</strong></td>
+<td style="text-align: right;"><strong>2500</strong></td>
+<td style="text-align: right;"><strong>2500</strong></td>
+<td style="text-align: right;"><strong>303 154</strong></td>
 </tr>
 <tr class="odd">
-<td>2014/TB</td>
-<td>200</td>
-<td>200</td>
-</tr>
-<tr class="even">
-<td>2016/TB</td>
-<td>2100</td>
-<td>2100</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">CBG</td>
+<td style="text-align: right;">CBG</td>
+<td style="text-align: right;"><a href="http://wlcg.web.cern.ch/">WLCG</a></td>
 </tr>
 </tbody>
 </table>
 </div>
-<!-- . . .    -->
-<!-- <br\> -->
-<!-- <br\> -->
-<!-- [columns,class="row"] -->
-<!-- [column,class="col-xs-6"] -->
-<!-- - in 2014: HPC storage was 200 TB only -->
-<!-- [/column] -->
-<!-- [column,class="col-xs-6"] -->
-<!-- - LHC run 1 averaged 1 GB/s   -->
-<!-- (all experiments) -->
-<!-- - LHC run 2is expected to yield 6 GB/s  -->
-<!-- [/column] -->
-<!-- [/columns] -->
 </section><section id="central-storage" class="slide level2">
 <h1>Central Storage</h1>
 <center>
@@ -172,6 +160,132 @@ used by <em>Huisken Lab</em>, <em>Myers Lab</em>, Tomancak Lab, LMF
 </ul>
 </div>
 </div>
+</section></section>
+<section><section id="automation-reduction-and-more" class="titleslide slide level1"><h1>Automation, Reduction and more</h1></section><section id="top-level-view" class="slide level2">
+<h1>Top level view</h1>
+<div class="row vertical-align">
+<div class="col-xs-6">
+<center>
+<img src="fig/spim-workflow.svg" style="width:40.0%" />
+</center>
+</div>
+<div class="col-xs-6">
+<ul>
+<li>aquisition on the microscope<br />
+ </li>
+<li>quality control<br />
+(can happen on the scope)<br />
+ </li>
+<li>processing on HPC infrastructure<br />
+(fusion, deconvolution)<br />
+ </li>
+<li>storage for downstream analysis (publication)</li>
+</ul>
+</div>
+</div>
+</section><section id="automate-transfer" class="slide level2">
+<h1>Automate Transfer?</h1>
+<div class="row vertical-align">
+<div class="col-xs-8">
+<center>
+<img src="img/humanshu_bhatia_TUDresden_thesis_p60_fig6.8.png" style="width:85.0%" />
+</center>
+</div>
+<div class="col-xs-4">
+<ul>
+<li><p>idea: monitor directory on aquisition host and apply rule based data transfers</p></li>
+<li><p>master thesis at TU Dresden in 2014/2015 comparing</p></li>
+<li><p>results from ramdisk to ramdisk promising only (for <a href="https://irods.org/">iRODS</a>)</p></li>
+<li><p>downstream transparency of <a href="https://irods.org/">iRODS</a> unclear</p></li>
+<li><p><a href="https://www.unicore.eu/">UNICORE</a> not yet there</p></li>
+</ul>
+</div>
+</div>
+</section><section id="automated-parallel-pipeline" class="slide level2">
+<h1>Automated Parallel Pipeline</h1>
+<div class="row vertical-align">
+<div class="col-xs-6">
+<center>
+<img src="img/cschmied_pipeline.png" style="width:70.0%" />
+</center>
+</div>
+<div class="col-xs-6">
+<ul>
+<li><p>publication by <a href="https://academic.oup.com/bioinformatics/article/32/7/1112/1744153/An-automated-workflow-for-parallel-processing-of">Schmied et al., 2016</a></p></li>
+<li><p>express individual steps as direct acyclic graph in <a href="https://snakemake.readthedocs.io/en/stable/">snakemake</a></p></li>
+<li><p>running <a href="fiji.sc">Fiji</a> in headless mode challenging</p></li>
+<li><p>parameter interface through <a href="fiji.sc">Fiji</a> macros very time consuming</p></li>
+<li><p>portable and scalable parallel execution</p></li>
+<li><p>replaced a large pile of shell scripts</p></li>
+</ul>
+</div>
+</div>
+</section><section id="training" class="slide level2">
+<h1>Training</h1>
+<div class="row vertical-align">
+<div class="col-xs-6">
+<center>
+IMAGE OF OUR COURSES
+</center>
+</div>
+<div class="col-xs-6">
+<ul>
+<li><p>knowledge is key when data becomes large</p></li>
+<li><p>rolled out <a href="www.software-carpentry.org">software carpentry</a> style course curriculum<br />
+( topics: bash, git, python, R, HPC )</p></li>
+<li><p>extremely positive feedback and high demand</p></li>
+</ul>
+</div>
+</div>
+<p> </p>
+<center>
+<strong>Trained scientists are happy scientists!</strong>
+</center>
+</section></section>
+<section><section id="present-and-future" class="titleslide slide level1"><h1>Present and Future</h1></section><section id="automated-transfers" class="slide level2" data-background-image="img/DARPA_Big_Data.jpg">
+<h1>Automated Transfers!</h1>
+<div style="font-size : 1.25em">
+<center>
+<ul>
+<li><p>API and format are still open</p></li>
+<li><p>obtain meta data during ingest (user interaction)</p></li>
+<li><p>interface acquisition to distributed pipelines</p></li>
+<li><p>challenge: stay flexible</p></li>
+</ul>
+</center>
+</div>
+</section><section id="the-future" class="slide level2">
+<h1>The Future</h1>
+<div class="row vertical-align">
+<div class="col-xs-6">
+<center>
+<img src="fig/spim-workflow-future.svg" style="width:40.0%" />
+</center>
+</div>
+<div class="col-xs-6">
+<ul>
+<li>Aquisition of deconvolved &amp; compressed stacks at the source<br />
+ </li>
+<li>Post-Processing to enhance resolution<br />
+ </li>
+<li>Realtime Visualisation (holo deck)<br />
+ </li>
+<li>Downstream analysis or storage or cloud based sharing or ..</li>
+</ul>
+</div>
+</div>
+</section></section>
+<section><section id="summary" class="titleslide slide level1"><h1>Summary</h1></section><section id="spim-is-here-to-stay" class="slide level2">
+<h1>SPIM is here to stay</h1>
+<ul>
+<li><p>SPIM microscopes are capable of produce unprecedented amounts of data (wrt potential and size)</p></li>
+<li><p>MPI CBG SPIM community is actively solving inherent problems (deconvolution, lack of resolution, compression, data management, ...)</p></li>
+<li><p>Good infrastructure (software/hardware) is key to high scientific discovery rate</p></li>
+</ul>
+ 
+<center>
+<strong>Thank you for your attention!</strong>
+</center>
 </section></section>
       </div>
     </div>
