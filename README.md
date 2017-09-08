@@ -4,7 +4,7 @@ This is my repository for slides and code examples for my talk at the DDN Life S
 
 # Slides
 
-The slides can be viewed under [this URL](https://psteinb.github.io/ddn-life-science-field-day-2017/index.htm) or locally by opening index.html with a browser of your choice (chrome/chromium and firefox give the best results).
+The slides can be viewed under [this URL](https://psteinb.github.io/2017-DDN-life-science-field-day/#/) or locally by opening index.html with a browser of your choice (chrome/chromium and firefox give the best results).
 
 # Dependencies
 
