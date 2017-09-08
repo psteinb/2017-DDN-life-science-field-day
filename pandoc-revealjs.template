@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="$revealjs-url$/lib/css/zenburn.css">
     $endif$
 
+    <link rel="stylesheet" href="my_reveal_overrides.css"/>
+    
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
       if( window.location.search.match( /print-pdf/gi ) ) {
