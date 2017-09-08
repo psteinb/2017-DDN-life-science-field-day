@@ -214,7 +214,7 @@ used by *Huisken Lab*, *Myers Lab*, Tomancak Lab, LMF
 [column,class="col-xs-6"]
 
 <center>
-IMAGE OF OUR COURSES
+![](img/course_photos.jpg){ width=80% }
 </center>
 
 [/column]
@@ -242,19 +242,19 @@ IMAGE OF OUR COURSES
 
 # Present and Future
 
-## Automated Transfers! { data-background-image="img/DARPA_Big_Data.jpg" }
+## Automated Transfers! { data-background-image="img/DARPA_Big_Data_shaded.png" }
 
 
 <div style="font-size : 1.25em">
 <center>
 
-- API and format are still open
+- ingest GUI on the PCs that aquire the data
 
-- obtain meta data during ingest (user interaction)
+- obtain meta data during ingest (user interaction on the scope)
 
-- interface acquisition to distributed pipelines
+- backend is unclear (iRODS, gridFTP, Lustre client, ...)
 
-- challenge: stay flexible
+- challenge: **Stay Flexible!**
 
 </center>
 </div>
