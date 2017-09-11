@@ -242,24 +242,30 @@ used by *Huisken Lab*, *Myers Lab*, Tomancak Lab, LMF
 
 # Present and Future
 
-## Automated Transfers! { data-background-image="img/DARPA_Big_Data_shaded.png" }
+## Generalizing from Lego Bricks { data-background-image="img/DARPA_Big_Data_shaded.png" }
 
 
 <div style="font-size : 1.25em">
 <center>
 
-- ingest GUI on the PCs that aquire the data
+- ingest GUI on the scopes (not only SPIM) :
 
-- obtain meta data during ingest (user interaction on the scope)
+    + aquire the data and ship it off
 
-- backend is unclear (iRODS, gridFTP, Lustre client, ...)
+    + obtain meta along the way (who and what and ...)
+    
+    + route data transfer and/or post-processing accordingly  
 
-- challenge: **Stay Flexible!**
+- backend is unclear (iRODS, gridFTP, direct Lustre client, ...)
+
+- adoption needs to yield a benefit for the users
+
+**Challenge: Stay Flexible!**
 
 </center>
 </div>
 
-## The Future
+## The Future ...
 
 [columns,class="row vertical-align"]
 
@@ -277,26 +283,31 @@ used by *Huisken Lab*, *Myers Lab*, Tomancak Lab, LMF
 &nbsp;
 - Post-Processing to enhance resolution  
 &nbsp;
-- Realtime Visualisation (holo deck)  
+- Realtime Visualisation (virtual reality)  
 &nbsp;
-- Downstream analysis or storage or cloud based sharing or ..
+- Downstream analysis or storage or cloud based sharing etc
 
 [/column]
 
-
 [/columns]
+
+## ... is here to stay { data-background-image="img/craig_venter_csbd_opening_fb.jpg" }
 
 # Summary
 
 ## SPIM is here to stay
 
-- SPIM microscopes are capable of produce unprecedented amounts of data (wrt potential and size)
+- SPIM microscopes are capable to produce unprecedented amounts of data  
+(wrt potential and size)
 
-- MPI CBG SPIM community is actively solving inherent problems (deconvolution, lack of resolution, compression, data management, ...)
+- MPI CBG SPIM community is actively solving inherent problems  
+(deconvolution, lack of resolution, compression, data management, ...)
 
 - Good infrastructure (software/hardware) is key to high scientific discovery rate
 
 &nbsp;
+&nbsp;
+
 <center>
 **Thank you for your attention!**
 </center>
