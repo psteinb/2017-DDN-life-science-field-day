@@ -260,7 +260,7 @@ used by *Huisken Lab*, *Myers Lab*, Tomancak Lab, LMF
 
 - adoption needs to yield a benefit for the users
 
-**Challenge: Stay Flexible!**
+**Collaborations Welcome!**
 
 </center>
 </div>
